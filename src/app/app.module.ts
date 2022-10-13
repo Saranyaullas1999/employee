@@ -7,6 +7,7 @@ import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchemployeeComponent } from './searchemployee/searchemployee.component';
 import { RouterModule,Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 const appRoutes : Routes=[
@@ -27,7 +28,8 @@ const appRoutes : Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
