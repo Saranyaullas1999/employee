@@ -9,14 +9,14 @@ export class AddemployeeComponent implements OnInit {
 
   constructor() { }
 
-  employeeCode=""
-  employeeName=""
-  desigination=""
+  code=""
+  name=""
+  designation=""
   gender=""
-  companyName=""
+  companyname=""
   salary=""
   address=""
-  mobileno=""
+  mobile=""
   email=""
   year=""
   bloodgroup=""
@@ -25,14 +25,14 @@ export class AddemployeeComponent implements OnInit {
 
   readValues=()=>{
     let data={
-      "employeeCode":this.employeeCode,
-  "employeeName":this.employeeName,
-  "desigination":this.desigination,
+      "code":this.code,
+  "name":this.name,
+  "designation":this.designation,
   "gender":this.gender,
-  "companyName":this.companyName,
+  "companyname":this.companyname,
   "salary":this.salary,
   "address":this.address,
- "mobileno":this.mobileno,
+ "mobile":this.mobile,
   "email":this.email,
   "year":this.year,
   "bloodgroup":this.bloodgroup,
