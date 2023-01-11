@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-addemployee',
@@ -7,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddemployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { }
 
-  employeeCode=""
-  employeeName=""
-  desigination=""
+  code=""
+  name=""
+  designation=""
   gender=""
-  companyName=""
+  companyname=""
   salary=""
   address=""
-  mobileno=""
+  mobile=""
   email=""
   year=""
   bloodgroup=""
@@ -25,20 +26,37 @@ export class AddemployeeComponent implements OnInit {
 
   readValues=()=>{
     let data={
-      "employeeCode":this.employeeCode,
-  "employeeName":this.employeeName,
-  "desigination":this.desigination,
+      "code":this.code,
+  "name":this.name,
+  "designation":this.designation,
   "gender":this.gender,
-  "companyName":this.companyName,
+  "companyname":this.companyname,
   "salary":this.salary,
   "address":this.address,
- "mobileno":this.mobileno,
+ "mobile":this.mobile,
   "email":this.email,
   "year":this.year,
   "bloodgroup":this.bloodgroup,
   "dob":this.dob
     }
     console.log(data)
+    this.myapi.addEmployee(data).subscribe(
+      (res)=>{
+        alert("Successfully added")
+      }
+    )
+    this.code=""
+    this.name=""
+    this.designation=""
+    this.gender=""
+    this.companyname=""
+    this.salary=""
+    this.address=""
+    this.mobile=""
+    this.email=""
+    this.year=""
+    this.bloodgroup=""
+    this.dob=""
   }
 
 
